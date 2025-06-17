@@ -1,9 +1,8 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { users, clock } from "lucide-react";
+import { Users, Clock } from "lucide-react";
 
 interface Table {
   id: string;
@@ -87,7 +86,7 @@ export const TableSelection = ({ onTableSelect }: TableSelectionProps) => {
                   <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 bg-amber-900 text-white p-2 rounded-lg text-sm whitespace-nowrap z-10">
                     <div className="font-semibold">Table {table.number}</div>
                     <div className="flex items-center gap-1">
-                      <users className="h-3 w-3" />
+                      <Users className="h-3 w-3" />
                       {table.capacity} guests
                     </div>
                     <div>{getTableTypeLabel(table.type)}</div>
@@ -136,7 +135,7 @@ export const TableSelection = ({ onTableSelect }: TableSelectionProps) => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center gap-2 text-amber-700">
-                <users className="h-4 w-4" />
+                <Users className="h-4 w-4" />
                 <span>Up to {table.capacity} guests</span>
               </div>
               <Button 

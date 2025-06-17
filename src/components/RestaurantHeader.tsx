@@ -1,5 +1,5 @@
 
-import { utensils } from "lucide-react";
+import { Utensils } from "lucide-react";
 
 export const RestaurantHeader = () => {
   return (
@@ -7,7 +7,7 @@ export const RestaurantHeader = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-center space-x-4">
           <div className="bg-white/10 p-3 rounded-full backdrop-blur-sm">
-            <utensils className="h-8 w-8" />
+            <Utensils className="h-8 w-8" />
           </div>
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">
