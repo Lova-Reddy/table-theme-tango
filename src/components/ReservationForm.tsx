@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { format } from "date-fns";
-import { calendar, clock, users, arrow-left } from "lucide-react";
+import { Calendar as CalendarIcon, Clock, Users, ArrowLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Reservation } from "@/pages/Index";
 
@@ -52,7 +52,7 @@ export const ReservationForm = ({ tableId, onSubmit, onBack }: ReservationFormPr
     <div className="max-w-2xl mx-auto space-y-6">
       <div className="flex items-center gap-4 mb-6">
         <Button variant="outline" onClick={onBack} className="bg-white/90">
-          <arrow-left className="h-4 w-4 mr-2" />
+          <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Table Selection
         </Button>
         <h2 className="text-3xl font-bold text-amber-900">Complete Your Reservation</h2>
@@ -61,7 +61,7 @@ export const ReservationForm = ({ tableId, onSubmit, onBack }: ReservationFormPr
       <Card className="bg-white/95 backdrop-blur-sm shadow-xl border-amber-200">
         <CardHeader>
           <CardTitle className="text-2xl text-amber-900 flex items-center gap-2">
-            <calendar className="h-6 w-6" />
+            <CalendarIcon className="h-6 w-6" />
             Table {tableId} Reservation Details
           </CardTitle>
         </CardHeader>
@@ -80,7 +80,7 @@ export const ReservationForm = ({ tableId, onSubmit, onBack }: ReservationFormPr
                         !date && "text-muted-foreground"
                       )}
                     >
-                      <calendar className="mr-2 h-4 w-4" />
+                      <CalendarIcon className="mr-2 h-4 w-4" />
                       {date ? format(date, "PPP") : <span>Pick a date</span>}
                     </Button>
                   </PopoverTrigger>
@@ -107,7 +107,7 @@ export const ReservationForm = ({ tableId, onSubmit, onBack }: ReservationFormPr
                     {timeSlots.map((slot) => (
                       <SelectItem key={slot} value={slot} className="hover:bg-amber-50">
                         <div className="flex items-center gap-2">
-                          <clock className="h-4 w-4" />
+                          <Clock className="h-4 w-4" />
                           {slot}
                         </div>
                       </SelectItem>
@@ -128,7 +128,7 @@ export const ReservationForm = ({ tableId, onSubmit, onBack }: ReservationFormPr
                   {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
                     <SelectItem key={num} value={num.toString()} className="hover:bg-amber-50">
                       <div className="flex items-center gap-2">
-                        <users className="h-4 w-4" />
+                        <Users className="h-4 w-4" />
                         {num} {num === 1 ? 'Guest' : 'Guests'}
                       </div>
                     </SelectItem>

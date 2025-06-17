@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { format } from "date-fns";
-import { check-circle, calendar, clock, users, mail, phone, utensils } from "lucide-react";
+import { CheckCircle, Calendar, Clock, Users, Mail, Phone, Utensils } from "lucide-react";
 import type { Reservation } from "@/pages/Index";
 
 interface ReservationConfirmationProps {
@@ -17,7 +17,7 @@ export const ReservationConfirmation = ({ reservation, onNewReservation }: Reser
       <div className="text-center space-y-4">
         <div className="flex justify-center">
           <div className="bg-green-100 p-4 rounded-full">
-            <check-circle className="h-12 w-12 text-green-600" />
+            <CheckCircle className="h-12 w-12 text-green-600" />
           </div>
         </div>
         <h2 className="text-3xl font-bold text-amber-900">Reservation Confirmed!</h2>
@@ -29,7 +29,7 @@ export const ReservationConfirmation = ({ reservation, onNewReservation }: Reser
       <Card className="bg-white/95 backdrop-blur-sm shadow-xl border-amber-200">
         <CardHeader className="bg-gradient-to-r from-amber-50 to-orange-50">
           <CardTitle className="text-2xl text-amber-900 flex items-center gap-2">
-            <utensils className="h-6 w-6" />
+            <Utensils className="h-6 w-6" />
             Reservation Details
           </CardTitle>
         </CardHeader>
@@ -38,7 +38,7 @@ export const ReservationConfirmation = ({ reservation, onNewReservation }: Reser
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4">
               <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-lg">
-                <calendar className="h-5 w-5 text-amber-600" />
+                <Calendar className="h-5 w-5 text-amber-600" />
                 <div>
                   <div className="font-semibold text-amber-900">Date</div>
                   <div className="text-amber-700">{format(reservation.date, "EEEE, MMMM do, yyyy")}</div>
@@ -46,7 +46,7 @@ export const ReservationConfirmation = ({ reservation, onNewReservation }: Reser
               </div>
 
               <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-lg">
-                <clock className="h-5 w-5 text-amber-600" />
+                <Clock className="h-5 w-5 text-amber-600" />
                 <div>
                   <div className="font-semibold text-amber-900">Time</div>
                   <div className="text-amber-700">{reservation.time}</div>
@@ -56,7 +56,7 @@ export const ReservationConfirmation = ({ reservation, onNewReservation }: Reser
 
             <div className="space-y-4">
               <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-lg">
-                <users className="h-5 w-5 text-amber-600" />
+                <Users className="h-5 w-5 text-amber-600" />
                 <div>
                   <div className="font-semibold text-amber-900">Party Size</div>
                   <div className="text-amber-700">{reservation.guests} {reservation.guests === 1 ? 'Guest' : 'Guests'}</div>
@@ -64,7 +64,7 @@ export const ReservationConfirmation = ({ reservation, onNewReservation }: Reser
               </div>
 
               <div className="flex items-center gap-3 p-3 bg-amber-50 rounded-lg">
-                <utensils className="h-5 w-5 text-amber-600" />
+                <Utensils className="h-5 w-5 text-amber-600" />
                 <div>
                   <div className="font-semibold text-amber-900">Table</div>
                   <div className="text-amber-700">Table {reservation.tableId}</div>
@@ -82,12 +82,12 @@ export const ReservationConfirmation = ({ reservation, onNewReservation }: Reser
                 <div className="text-amber-700">{reservation.name}</div>
               </div>
               <div className="flex items-center gap-3">
-                <mail className="h-4 w-4 text-amber-600" />
+                <Mail className="h-4 w-4 text-amber-600" />
                 <div className="font-semibold text-amber-900 w-20">Email:</div>
                 <div className="text-amber-700">{reservation.email}</div>
               </div>
               <div className="flex items-center gap-3">
-                <phone className="h-4 w-4 text-amber-600" />
+                <Phone className="h-4 w-4 text-amber-600" />
                 <div className="font-semibold text-amber-900 w-20">Phone:</div>
                 <div className="text-amber-700">{reservation.phone}</div>
               </div>
